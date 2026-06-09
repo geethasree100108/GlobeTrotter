@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1><i class="wi wi-day-sunny"></i>Team 
+                <i class="wi wi-rain"></i>Weather 
+                <i class="wi wi-cloudy"></i>Dashboard
+            </h1>
+            <p>Track weather across multiple cities simultaneously</p>
+        </header>
+        <section class="search-section">
+            <form id="search-form">
+                <input 
+                type="text"
+                id="search-input"
+                placeholder="Enter city name (e.g., Paris, Tokyo)..."
+                required
+                >
+                <button type="submit" id="search-button">Add City</button>
+            </form>
+        </section>
+        <div id="loading-spinner" class="spinner hidden"></div>
+        <main id="weather-container" class="weather-grid">
+            <p class="empty-state">No cities tracked yet.Search for a city above to get started!</p>
+        </main>
+    </div>
+    <script src="config.js"></script>
+    <script src="search.js"></script>
+    <script src="api.js"></script>
+    <script src="ui-storage.js"></script>
+</body>
+</html>
