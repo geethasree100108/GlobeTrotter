@@ -85,7 +85,8 @@ header p{
     font-style: italic;
     padding: 3rem;
 }
-.card{
+.card, .weather-card{
+    position: relative;
     background-color:var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -112,17 +113,9 @@ header p{
 }
 .card .wind{
     font-size: 0.9rem;
-    color: var(--tetx-muted);
+    color: var(--text-muted);
 }
-.spinner{
-    width: 50px;
-    height: 50px;
-    border: 5px solid var(--border);
-    border-top: 5px solid var(--accent);
-    border-radius: 50%;
-    margin: 2rem auto;
-    animation: spin 1s linear infinte;
-}
+
 .hidden{
     display: none !important;
 }
@@ -130,3 +123,32 @@ header p{
     0%{transform : rotate(0deg);}
     100%{transform: rotate(360deg);}
 }
+
+.delete-btn{
+    position: absolute;
+    top:12px;
+    right: 12px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background:transparent;
+    border: none;
+    color: var(--text-muted);
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover{
+    background-color: rgba(239,68,68,0.1);
+    color: #ef4444;
+}
+
+.delete-btn:active{
+    transform: scale(0.92);
+}
+
